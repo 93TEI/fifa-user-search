@@ -1,7 +1,7 @@
 package com.search.fifa;
 
 import com.search.fifa.config.ApiKey;
-import com.search.fifa.dto.UserResponseDto;
+import com.search.fifa.web.dto.UserResponseDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
