@@ -1,7 +1,7 @@
-package com.jojoldu.book.springboot.fifa.web;
+package com.search.fifa.web;
 
-import com.jojoldu.book.springboot.fifa.dto.UserResponseDto;
-import com.jojoldu.book.springboot.fifa.service.UserService;
+import com.search.fifa.dto.UserResponseDto;
+import com.search.fifa.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

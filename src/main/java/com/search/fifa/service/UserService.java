@@ -1,9 +1,9 @@
-package com.jojoldu.book.springboot.fifa.service;
+package com.search.fifa.service;
 
-import com.jojoldu.book.springboot.fifa.api.UserApiClient;
-import com.jojoldu.book.springboot.fifa.domain.User;
-import com.jojoldu.book.springboot.fifa.domain.UserRepository;
-import com.jojoldu.book.springboot.fifa.dto.UserResponseDto;
+import com.search.fifa.api.UserApiClient;
+import com.search.fifa.domain.User;
+import com.search.fifa.domain.UserRepository;
+import com.search.fifa.dto.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

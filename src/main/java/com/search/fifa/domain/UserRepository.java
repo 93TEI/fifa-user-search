@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.fifa.domain;
+package com.search.fifa.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

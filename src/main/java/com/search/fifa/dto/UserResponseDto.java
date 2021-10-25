@@ -1,6 +1,6 @@
-package com.jojoldu.book.springboot.fifa.dto;
+package com.search.fifa.dto;
 
-import com.jojoldu.book.springboot.fifa.domain.User;
+import com.search.fifa.domain.User;
 import lombok.Getter;
 
 @Getter

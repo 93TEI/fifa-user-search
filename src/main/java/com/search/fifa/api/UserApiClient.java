@@ -1,7 +1,7 @@
-package com.jojoldu.book.springboot.fifa.api;
+package com.search.fifa.api;
 
-import com.jojoldu.book.springboot.fifa.config.ApiKey;
-import com.jojoldu.book.springboot.fifa.dto.UserResponseDto;
+import com.search.fifa.config.ApiKey;
+import com.search.fifa.dto.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
