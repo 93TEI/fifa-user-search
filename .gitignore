@@ -1,2 +1,5 @@
 # Project exclude paths
 /.gradle/
+/.idea/
+/src/main/java/com/search/fifa/config/ApiKey.java
+
