@@ -1,4 +1,4 @@
-package com.jojoldu.book.springboot.fifa.domain;
+package com.search.fifa.domain;
 
 import lombok.Builder;
 import lombok.Getter;
