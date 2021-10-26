@@ -16,8 +16,9 @@ var main = {
             url: '/api/v1/user/'+nickname,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
-        }).done(function (res) {
-            alert(JSON.stringify(res));
+        }).done(function () {
+            //alert(JSON.stringify(res))
+            window.loaction.href = '/user/info/'+nickname;
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
