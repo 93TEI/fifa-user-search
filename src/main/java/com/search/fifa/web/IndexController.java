@@ -21,7 +21,6 @@ public class IndexController {
     @GetMapping("/user/info/{nickname}")
     public String userInfo(@PathVariable String nickname, Model model) {
         UserInfoResponseDto userResponseDto = userService.userInfoFindById(nickname);
-        System.out.println("IndexController : " + userResponseDto.getAccessId()+","+userResponseDto.getNickname()+","+userResponseDto.getLevel());
         model.addAttribute("user", userResponseDto);
         return "user-info";
     }

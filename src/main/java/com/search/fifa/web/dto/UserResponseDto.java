@@ -18,7 +18,6 @@ public class UserResponseDto {
                 .nickname(nickname)
                 .level(level)
                 .build();
-
     }
 
 }

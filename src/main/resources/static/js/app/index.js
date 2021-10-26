@@ -17,8 +17,8 @@ var main = {
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function () {
-            //alert(JSON.stringify(res))
-            window.loaction.href = '/user/info/'+nickname;
+            alert(JSON.stringify(res))
+            //window.loaction.href = '/user/info/'+nickname;
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
