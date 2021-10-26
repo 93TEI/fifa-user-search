@@ -14,7 +14,7 @@ public class UserApiController {
     private final UserService userService;
 
     @GetMapping("/api/v1/user/{nickname}")
-    public String get(@PathVariable String nickname) {  // @PathVariable : URI의 일부를 변수로 보냄
+    public String requestUserInfo(@PathVariable String nickname) {  // @PathVariable : URI의 일부를 변수로 보냄
         UserResponseDto userResponseDto = userService.searchUserInfo(nickname);
         return userService.userInfoSave(userResponseDto);
     }

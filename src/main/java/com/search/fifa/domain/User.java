@@ -12,6 +12,9 @@ import javax.persistence.*;
 @Entity
 public class User {
     @Id
+
+
+
     @Column
     private String nickname;
 
