@@ -11,10 +11,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 public class User {
+
     @Id
-
-
-
     @Column
     private String nickname;
 

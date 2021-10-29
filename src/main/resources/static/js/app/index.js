@@ -3,7 +3,6 @@ var main = {
 
         var _this = this;
         $('#btn-user-info').on('click', function () {
-            console.log("Test")
             _this.search_user_info();
         });
     },

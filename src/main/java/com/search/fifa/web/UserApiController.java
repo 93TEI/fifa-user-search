@@ -1,6 +1,7 @@
 package com.search.fifa.web;
 
 import com.search.fifa.service.UserService;
+import com.search.fifa.web.dto.UserInfoResponseDto;
 import com.search.fifa.web.dto.UserResponseDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,4 +19,5 @@ public class UserApiController {
         UserResponseDto userResponseDto = userService.searchUserInfo(nickname);
         return userService.userInfoSave(userResponseDto);
     }
+
 }

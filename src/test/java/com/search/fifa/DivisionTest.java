@@ -28,7 +28,7 @@ public class DivisionTest {
 
     private UserDivisionDto[] userDB;
 
-    private final String UserInfoUrl = "https://api.nexon.co.kr/fifaonline4/v1.0/users/";
+    private final String UserInfoUrl = "https://api.nexon.co.kr/fifaonline4/v1.0/users/{accessId}/maxdivision";
 
     @Test
     public void division()
@@ -39,7 +39,7 @@ public class DivisionTest {
         httpHeaders.set("Authorization", ApiKey.API_KEY);
         final HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
 
-        userDB = restTemplate.exchange(UserInfoUrl +accessId+"/maxdivision", HttpMethod.GET, entity, UserDivisionDto[].class, accessId).getBody();
+        userDB = restTemplate.exchange(UserInfoUrl, HttpMethod.GET, entity, UserDivisionDto[].class, accessId).getBody();
         for(int i =0; i<2;i++)
         {
             System.out.println(userDB[i].getMatchType());
