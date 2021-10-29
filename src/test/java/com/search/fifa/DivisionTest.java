@@ -31,7 +31,7 @@ public class DivisionTest {
     private final String UserInfoUrl = "https://api.nexon.co.kr/fifaonline4/v1.0/users/";
 
     @Test
-    public void nickNameSearch()
+    public void division()
     {
         String accessId = "11cfecd459e4de5dbbd60cf1";
 
