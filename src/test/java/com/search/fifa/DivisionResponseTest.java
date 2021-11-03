@@ -1,0 +1,73 @@
+package com.search.fifa;
+
+
+import com.search.fifa.config.ApiKey;
+import com.search.fifa.web.dto.UserDivisionDto;
+import com.search.fifa.web.dto.UserDivisionResponseDto;
+import lombok.Builder;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class DivisionResponseTest {
+
+    @LocalServerPort
+    private int port;
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    private UserDivisionDto[] userDB;
+    private UserDivisionResponseDto[] userDivisionResponseDto;
+
+    private final String UserInfoUrl = "https://api.nexon.co.kr/fifaonline4/v1.0/users/{accessId}/maxdivision";
+
+
+    @Test
+    public void division()
+    {
+        String accessId = "11cfecd459e4de5dbbd60cf1";
+
+        final HttpHeaders httpHeaders = new HttpHeaders();  //HttpHeaders는 서버에 데이터를 보내주는 방법
+        httpHeaders.set("Authorization", ApiKey.API_KEY);
+        final HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
+
+        userDB = restTemplate.exchange(UserInfoUrl, HttpMethod.GET, entity, UserDivisionDto[].class, accessId).getBody();
+        for(int i =0; i<2;i++)
+        {
+            System.out.println(userDB[i].getMatchType());
+            System.out.println(userDB[i].getDivision());
+            System.out.println(userDB[i].getAchievementDate());
+        }
+
+        System.out.println("Asdasdasdasdasdasdasd");
+        int j=0;
+        for (UserDivisionDto temp : userDB) {
+            userDivisionResponseDto[0] = UserDivisionResponseDto.builder()
+                    .matchType(1)
+                    .division("as")
+                    .date("asd")
+                    .build();
+        }
+
+
+    }
+}
+
+/*
+
+            userDivisionResponseDto[j++] = UserDivisionResponseDto.builder()
+                    .matchType(temp.getMatchType())
+                    .division(temp.getDivision())
+                    .date(temp.getAchievementDate())
+                    .build();
+ */
