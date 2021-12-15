@@ -9,11 +9,9 @@ import com.search.fifa.web.dto.UserDivisionDto;
 import com.search.fifa.web.dto.UserInfoResponseDto;
 import com.search.fifa.web.dto.UserResponseDto;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Slf4j
 @RequiredArgsConstructor
 @Service
 public class UserService {
